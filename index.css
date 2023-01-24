@@ -30,10 +30,6 @@
   border-radius: 8px;
 }
 
-.picture:hover {
-  filter: brightness(80%);
-}
-
 .picture-container {
   display: flex;
   flex-wrap: wrap;
