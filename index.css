@@ -130,3 +130,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+}

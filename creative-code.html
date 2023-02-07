@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="static" href="C:\Users\frann\Documents\HCDE 438\frannieello.github.io\static">
+  </head>
+  <body>
+    <div class="page-container">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="static/logo.png" href="index.html">
+            </a>
+            <div class="navitems">
+              <a class="navlink" href="index.html">My Work<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="about.html">About Me<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="cheatsheet.html">Cheatsheet</a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="https://www.frannieello.com">Product Design</a>
+            </div>
+          </div>
+        <h1 class="header">Creative Coding with p5.js</h1>
+        <h2 class="header">Overview</h2>
+        <p class="paragraph">
+            Through this project, I got more familiarized with using Javascript through the p5.js library. Here, I learned how to utilize concepts like for loops, arrays, and classes to create 6 different visualizations all from code! Take a look at each sketch and click to see the source code in the p5.js editor!<br><br>
+        </p>
+        <div class="flex-grid">
+            <div class="col">
+                <a href="https://editor.p5js.org/fello/full/6YGid6_ey" ><img class="picture" src="/static/static.png"></a><br>
+                <a class="paragraph" href="https://editor.p5js.org/fello/full/6YGid6_ey" style="text-decoration:none">Static</a>
+            </div>
+            <div class="col">
+                <a href="https://editor.p5js.org/fello/full/eXFzRWPWn" ><img class="picture" src="/static/random.gif"></a><br>
+                <a class="paragraph" href="https://editor.p5js.org/fello/full/eXFzRWPWn" style="text-decoration:none">Random</a>
+            </div>
+            <div class="col">
+                <a href="https://editor.p5js.org/fello/full/GZ0VJ4jIT" ><img class="picture" src="/static/infinite.gif"></a><br>
+                <a class="paragraph" href="https://editor.p5js.org/fello/full/GZ0VJ4jIT" style="text-decoration:none">Infinite</a>
+            </div>
+            <div class="col">
+                <a href="https://editor.p5js.org/fello/full/9Kv2KH130" ><img class="picture" src="/static/interactive.gif"></a><br>
+                <a class="paragraph" href="https://editor.p5js.org/fello/full/9Kv2KH130" style="text-decoration:none">Interactive</a>
+            </div>
+            <div class="col">
+                <a href="https://editor.p5js.org/fello/full/eSAj_irYY" ><img class="picture" src="/static/sound.gif"></a><br>
+                <a class="paragraph" href="https://editor.p5js.org/fello/full/eSAj_irYY" style="text-decoration:none">Sound</a>
+            </div>
+            <div class="col">
+                <a href="https://editor.p5js.org/fello/sketches/2Q-UKogHv" ><img class="picture" src="/static/audiovis.gif"></a><br>
+                <a class="paragraph" href="https://editor.p5js.org/fello/sketches/2Q-UKogHv" style="text-decoration:none">Audio Visualization</a>
+            </div>
+        </div>
+        <h2 class="header">Development process</h2>
+        <p class="paragraph">
+            The process of creating these sketches could be broken down into the following steps:<br><br>
+            <b>1. Finding Inspiration</b><br>
+            Hence the title of the project, I wanted to show my creative skills within each sketch. Each sketch had a prompt on what the code should execute and some guidelines for the behavior. In this step, I looked through examples of programs that I could base off of through video tutorials to understand where I could start.<br><br>
+            <b>2. Experiment</b><br>
+            The next phase of development was playing around with different shapes, functions, and loops to see how they would change my visualization. I was able to gain a better understanding of some of the concepts within p5.js by simply adding a line of code and commenting it out to learn more about the behavior of my programs. Below is a gif of my first attempt at trying to create a “shooting star” program for my infinite sketch. <br><br>
+        </p>
+        <img class="picture" src="/static/star-bug.gif"><br>
+        <p class="paragraph">
+            <b>3. Debug</b><br>
+            Luckily, I found the p5.js editor incredibly helpful, in which throughout my experimenting steps, I could easily locate if I had a missing bracket, declared a variable incorrectly, or made other silly mistakes in my code. The console log for p5.js was a big help in my experimenting steps.<br><br>
+        </p>
+        <h2 class="header">Issue Deep Dive</h2>
+        <p class="paragraph">
+            One of the issues I kept encountering at the beginning of this project was writing conditions or infinite loops that would cause the entire editor to crash. When creating my first sketches with the editor, I kept running into this issue and had to learn about what conditions can cause an infinite loop that makes my browser crash. In many of these instances, it was due to creating a for loop with a variable that has conditions far too complex for the editor to handle, which usually resulted in an error such as the one seen below.<br><br>
+        </p>
+        <img class="picture" src="/static/crash.PNG">
+        <h2 class="header">Ideas and Future Work</h2>
+        <p class="paragraph">
+            Looking ahead, there will always be things I will look back upon and want to improve upon. Specifically for this project, I would love to learn more about using vectors to create other shapes that are responsive to the entire window. Since I used a lot of ellipses and stars throughout my project, it would be nice to challenge myself to make a more unique sketch.<br>
+        </p>
+        <h2 class="header">Kudos</h2>
+        <p class="paragraph">
+            I definitely wouldn’t have been able to create this extension without the following resources:<br>
+            <ul style="text-align: left;">
+                <li>Shoutout to the Coding Train & p5.js references documents for helping me establish a foundational understanding of p5.js!</li>
+                <li>This <a href="https://www.youtube.com/watch?v=DYb5TfN880I">video</a> in particular helped me understand the purpose of classes for creating multiple falling objects (as seen in my star fall infinite sketch)</li>
+                <li>This <a href="https://nishanc.medium.com/audio-visualization-in-javascript-with-p5-js-cf3bc7f1be07">medium article</a> gave me some good background into how to create an audio visualization!</li>
+            </ul>
+        </p>
+  </body>
+</html>
