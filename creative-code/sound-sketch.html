@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="static" href="C:\Users\frann\Documents\HCDE 438\frannieello.github.io\static">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <script>
+        var button;
+        function setup() {
+          createCanvas(windowWidth, windowHeight);
+          background("white");
+          img = loadImage("spike.jpg");
+          soundFormats("mp3");
+          defuse = loadSound("defuse.mp3");
+          button = createButton("Defuse the spike?");
+          button.mousePressed(togglePlaying);
+          button.position(width / 2, height / 8)
+        
+        }
+        
+        function windowResized() {
+          resizeCanvas(windowWidth, windowHeight);
+        }
+        
+        function draw() {
+          image(img, width / 4, height / 4, img.width / 4, img.height / 4);
+        }
+        
+        function togglePlaying() {
+          if (!defuse.isPlaying()) {
+            defuse.play();
+          }
+        }
+        
+    </script>
+  </head>
+</html>
