@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lit-html": "^2.6.1",
+    "p5.play": "^3.6.2"
+  }
+}

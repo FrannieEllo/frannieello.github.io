@@ -1,0 +1,46 @@
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  background("rgb(255,239,239)");
+  push();
+  translate(width * 0.5 - 150, height * 0.5);
+  fill("#B63947");
+  noStroke();
+  star(0, 0, 100, 70, 16);
+  pop();
+  
+  push();
+  translate(width * 0.5 - 150, height * 0.5);
+  fill("#B63947");
+  noStroke();
+  star(200, 250, 100, 45, 20);
+  pop();
+  
+  push();
+  translate(width * 0.5 - 150, height * 0.5);
+  fill("#B63947");
+  noStroke();
+  star(150, -250, 100, 55, 24);
+  pop();
+}
+
+function star(x, y, radius1, radius2, npoints) {
+  let angle = TWO_PI / npoints;
+  let halfAngle = angle / 2.0;
+  beginShape();
+  for (let a = 0; a < TWO_PI; a += angle) {
+    let sx = x + cos(a) * radius2;
+    let sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius1;
+    sy = y + sin(a + halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
+}
