@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="static" href="C:\Users\frann\Documents\HCDE 438\frannieello.github.io\static">
+  </head>
+  <body>
+    <div class="page-container">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="static/logo.png" href="index.html">
+            </a>
+            <div class="navitems">
+              <a class="navlink" href="index.html">My Work<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="about.html">About Me<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="cheatsheet.html">Cheatsheet</a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="https://www.frannieello.com">Product Design</a>
+            </div>
+          </div>
+        <h1 class="header">Final Project Proposal</h1>
+        <h2 class="header">Project Description</h2>
+        <p class="paragraph">
+          My final project will build upon my MP3 assignment, in which I hope to extend the length of the level as well as introduce new game mechanics such as enemies, player health, and movement acceleration. Below is an image of what the sprites would look like during the prototyping stage, and the gif after is a Figma prototype of what the final interface may look like.
+          All of the new mechanics above would use sprites that should not be stylized and should primarily focus on the functionality of the program.
+        </p>
+        <img class="picture" src="/static/background-lofi.png">
+        <img class="picture" src="/static/final-prototype.gif">
+        <h2 class="header">Prototype Version</h2>
+        <p class="paragraph">
+            The prototyped version of the game would look like my MP3 assignment with additional sprites that will represent the new game mechanics of my game. These additions would include:
+            <ul style="text-align: left;">
+                <li>Enemy Sprites that upon touching the player, would cause the player to “lose” a life</li>
+                <li>Logic for player “lives” to turn into hearts, in which fall damage or enemy collisions would result in lost HP (health points)</li>
+                <li>Improved animations for falling platforms to indicate interactivity</li>
+            </ul>
+        </p>
+        <h2 class="header">Final Version</h2>
+        <p class="paragraph">
+            The final version of the program should utilized stylized sprites with relevant animations and the following additions:
+            <ul style="text-align: left;">
+                <li>A fixed hotbar showing the total number of carrots collected and the amount of hearts that a player has</li>
+                <li>Ending screen to indicate that players won the game & can restart the level</li>
+                <li>Revisited movement mechanics for the player, in which the player should accelerate when holding the right or left keys</li>
+                <li>In addition to the movement mechanics above, setting a limit on the jump height to prevent “double jumping” with the up key</li>
+            </ul>
+        </p>
+        <h2 class="header">Step-by-Step Plan</h2>
+        <p class="paragraph">
+            The final version of the program should utilized stylized sprites with relevant animations and the following additions:
+            <ol style="text-align: left;">
+                <li>Update game map diagram to add new mechanics to the tile grid and plan out the new levels</li>
+                <li>Add platform tiles into new levels</li>
+                <li>Add enemy sprites into the game</li>
+                <li>Revise “lives” logic into health points</li>
+                <li>Add collision logic to enemy sprites to remove health points from player</li>
+                <li>Add “player death” logic that removes all health points when the player falls out of the map</li>
+                <li>Add “game over” screen</li>
+                <li>Improve animations for falling platform tiles (End of Milestone 1)</li>
+                <li>Create hotbar using p5 js shapes and images</li>
+                <li>Add to “game over” function to add a success ending screen to allow people to go to the next level</li>
+                <li>Change player movement to support left-right acceleration and set a counter to limit double jumping</li>
+                <li>Test out all levels with new player movement</li>
+                <li>Submit assignment (End of Milestone 2)</li>
+            </ol>
+        </p>
+        <h2 class="header">Unknowns</h2>
+        <p class="paragraph">
+            <ul style="text-align: left;">
+                <li>Learning to implement a “start”, “end” and “game over” screen</li>
+                <li>Refactoring code to move functions outside of my draw() function</li>
+            </ul>
+        </p>
+        <h2 class="header">Stretch Goal</h2>
+        <p class="paragraph">
+            <ul style="text-align: left;">
+                <li>Make at least 2 levels with increasing difficulty</li>
+            </ul>
+        </p>
+  </body>
+</html>
