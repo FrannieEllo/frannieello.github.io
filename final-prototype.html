@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="static" href="C:\Users\frann\Documents\HCDE 438\frannieello.github.io\static">
+  </head>
+  <body>
+    <div class="page-container">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="static/logo.png" href="index.html">
+            </a>
+            <div class="navitems">
+              <a class="navlink" href="index.html">My Work<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="about.html">About Me<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="cheatsheet.html">Cheatsheet</a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="https://www.frannieello.com">Product Design</a>
+            </div>
+          </div>
+        <h1 class="header">Final Project Proposal</h1>
+        <h2 class="header">Project Description</h2>
+        <p class="paragraph">
+            Building upon my MP3, I added additional game mechanics and another level into my farmer platformer game to improve the overall experience. At the time I am writing this, I am having difficulty deploying the assets of my project, and thus my site is not releasing the sprites with the images I have created for them. Even so, this is deployed at this <a class="paragraph" href="https://frannieello.github.io/final-prototype/" style="text-decoration:none">link.</a>
+        </p>
+        <img class="picture" src="/static/prototype-progress.gif">
+        <p class="paragraph">
+            <b>Project Scope:</b> For the most part, my project scope has stayed the same in regard to adding new game mechanics, such as enemy sprites, adding a HUD, and revising “lives” into health points. One major change is that I find myself taking a lot of time in creating a new level, that it is actually making me question if making more than 2 levels in this project would be a sufficient way to use my time.<br>
+            <b>Time Management:</b> Surprisingly, I spent less time working out the new mechanics of this project than I thought I would. Most of my time was spent reworking code that I had previously implemented versus adding new mechanics. A bit of a setback was the issue of deployment, which I will uncover more in my issue deep dive. <br>
+            <b>Implementation Plan:</b> My implementation plan has shifted a bit in which I was able to complete certain milestone 2 objectives and also found myself unable to complete certain milestone 1 objectives. Even with this tradeoff, I feel confident in the ability to implement my final version, as my current prototype shows commented out code that contains my explorations in certain issues I hope to uncover more. <br>       </p>
+        <h2 class="header">Development Process</h2>
+        <p class="paragraph">
+            Development Process
+            <ul style="text-align: left;">
+                <li>Update game map diagram to add new mechanics to the tile grid and plan out the new levels</li>
+                <li>Add platform tiles into new levels</li>
+                <li>Add enemy sprites into the game</li>
+                <li>Revise “lives” logic into health points</li>
+                <li>Add collision logic to enemy sprites to remove health points from player</li>
+                <li>Add HUD display</li>
+                <li>Add game menu</li>
+            </ul>
+        </p>
+        <p class="paragraph">
+            The following two methods helped guide my work:
+            <ol style="text-align: left;">
+                <li><b>Planning</b></li>
+                Similar to my last project, I needed to make a concrete plan of my levels, as well as think closely about how I might add certain game mechanics with my existing code.<br>
+                <li><b>Reiterating & reworking</b></li>
+                Since I was working with existing code, I found that I had to rewrite certain functions and parts of the game so that many variables could be access globally as well as make the overall program less redundant. Since levels were often hard-coded to account for where tiles, carrots, and other sprites go, I found myself reiterating on branching logics using if statements to define what level the player is on.
+            </ol>
+        </p>
+        <h2 class="header">Issue Deep-Dive</h2>
+        <p class="paragraph">
+            There were a lot more issues than I had imagined, but the two that challenged me within this project were asset deployment and creating a game menu. For asset deployment, I kept finding that my assets were not deploying into my live site, causing a 404 resource error in my console. I believed that this was a similar error that I ran through with MP3, and hoped to follow the same logic to fix this issue for my prototype. However, since I was using Vite, I struggled to understand how to fix this problem, as I was making many adjustments to my package.json and vite.config files to no avail. 
+            Another issue that I want to explore further in my final is creating a game menu. In my game menu, I found that due to the nature of my games being written primarily in the windows.setup function, I need to learn more about how I might guide users to another level without using windows.draw.
+        </p>
+        <img class="picture" src="/static/prototype-issue.gif">
+
+        <h2 class="header">Step-by-Step Plan</h2>
+        <p class="paragraph">
+            I definitely overestimated the amount of effort it would take to restructure my code, that I was not able to meet all of my initial milestone goals for this prototype. Even so, I hope to include the following in the next iteration:
+            <ol style="text-align: left;">
+                <li>Add “player death” logic that removes all health points when the player falls out of the map</li>
+                <li>Add “game over” screen</li>
+                <li>Improve animations for falling platform tiles (End of Milestone 1)</li>
+                <li>Add to “game over” function to add a success ending screen to allow people to go to the next level</li>
+                <li>Change player movement to support left-right acceleration and set a counter to limit double jumping</li>
+            </ol>
+        </p>
+        <h2 class="header">Kudos</h2>
+        <p class="paragraph">
+            I definitely wouldn’t have been able to create this extension without the following resources:<br>
+            <ul style="text-align: left;">
+                <li>Han Feng, Alfie Vidrio, and Ryan Bautista for helping me understand more about how I might deploy my code in Vite! I believe none of them ended up using vite in their own projects, but they were super helpful in helping me try to debug here and there. </li>
+                <li><a href="https://p5play.org/learn/index.html">The entire P5 Play Documentation</a> -  I love you P5 Play Documentation <3 </li>
+            </ul>
+        </p>
+  </body>
+</html>
