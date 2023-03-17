@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="static" href="C:\Users\frann\Documents\HCDE 438\frannieello.github.io\static">
+  </head>
+  <body>
+    <div class="page-container">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="static/logo.png" href="index.html">
+            </a>
+            <div class="navitems">
+              <a class="navlink" href="index.html">My Work<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="about.html">About Me<br></a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="cheatsheet.html">Cheatsheet</a>
+            </div>
+            <div class="navitems">
+              <a class="navlink" href="https://www.frannieello.com">Product Design</a>
+            </div>
+          </div>
+        <h1 class="header">Final Project: Carrot Hero</h1>
+        <h2 class="header">Project Description</h2>
+        <p class="paragraph">
+            The previously unnamed game I created for my MP3, Carrot Hero, is a higher-fidelity game that includes another level, new game mechanics, and support to allow players to replay the game without refreshing their page. This game is created entirely in Javascript, using the P5 js and P5 play libraries for development. You can access the game <a href="https://frannieello.github.io/carrot-hero/" style="text-decoration:none">here.</a>
+        </p>
+        <img class="picture" src="/static/carrot-hero.gif">
+        <h2 class="header">Development Process</h2>
+        <p class="paragraph">
+            Since much of my process was previously planned out, I went into my project by prioritizing the following additions to implement into my game. These additions were prioritized via feedback I received from sharing this project in class with students in HCDE 438, but I also went and conducted a “likes, dislikes, design ideas” session to gather feedback from 5 peers.
+            <ol style="text-align: left;">
+                <li>Branching logic between levels, game menus, and game over screens</li>
+                <li>Add “game over” screen</li>
+                <li>Asynchronous sprite movement for stink bugs</li>
+            </ol>
+        </p>
+        <p class="paragraph">
+            <ol style="text-align: left;">
+                <li><b>Branching logic</b></li>
+                Similar to the issues presented in the prototype version, the most difficult aspect of this project was figuring out how to refactor my code in order to connect the two levels and also navigate to the menus. Initially, I had all of my levels defined in the windows.setup function, so for this phase I began by moving all of these definitions into a separate function called levels() that was called depending on the value of a variable called level. I started this process by connecting the game menu to level 1, then level 1 to level 2.
+                <li><b>Game Over (and adding a Game Complete too!)</b></li>
+                After figuring out how to connect the game menu to level 1, I realized that during testing, I needed to add both a game over and game complete state. Since I had already figured out how to create a game menu in my prototype, I used the same logic to create the interface of the game over and game complete phases. The last step was then defining the conditions in which players would navigate to the game over vs. the game complete phases. Once that was defined, I went into connecting both of these phases back to the player menu.
+                <li><b>Asynchronous sprite movement for stink bugs</b></li>
+                The last thing I needed to figure out was looking into how to make my enemy sprites move back and forth to add an additional level of challenge to the player. I implemented this part of my code by first testing on the P5 play documentation to understand the logic and then mirror the same thing in my code.
+            </ol>
+        </p>
+        <p class="paragraph">
+            The following points are things I had initially planned out in my project plan; however, when it came to implementing, I found that they didn’t fit in with the vision I had for this game.
+            <ol style="text-align: left;">
+                <li>Improve animations for falling platform tiles - Out of the 5 users I asked to play my game for feedback, only 1 had mentioned a desire to animate the falling platform tiles to make them more apparent. The remaining users found them surprisingly, but did not think that a visual appearance was necessary to improve their experience, so I decided to move forward without making any changes.</li>
+                <li>Change player movement to support left-right acceleration and set a counter to limit double jumping - I would definitely revisit in the future, but these levels are short and I found that almost everyone who had played would hold their d- and a- keys, so movement acceleration would only speed up a player’s completion rate.</li>
+                <li>Add “player death” logic that removes all health points when the player falls out of the map - Considering that this is still a pretty short game, I felt it was more appropriate to keep it as when the player falls out of the map, they lose one health point for replayability.</li>
+            </ol>
+        </p>
+        <h2 class="header">Issue Deep-Dive</h2>
+        <p class="paragraph">
+            The most concerning issue I dealt with came after I implemented all of the steps above. All of the sprites and tiles from previous levels kept loading in on the next level, causing this mix where all of the game elements were mixed together in one. See the gif below for a glimpse into what this looked like:</p>
+        <img class="picture" src="/static/final-bug.gif">
+        <p class="paragraph">
+            I spent a good chunk of time reading through p5 js documentation, as I believed that this was an error as a result of my levels being partially defined in my window.setup function. I played around with remove(), as I believed that I needed to clear out all of my sprites before each level started. It wasn’t until I talked through my issue in office hours with Raina that I found the proper syntax for removing a sprite in p5 play. I ended up creating a function called clearPrevLevel() which removed every single sprite group in the previous level before adding the new tiles and sprites for the new level.
+        </p>
+        <h2 class="header">Ideas and Future Work</h2>
+        <p class="paragraph">
+            While my ideas changed quite a bit in this final iteration, I found that this project was a whole lot of fun and I want to continue working on it in the future. Here are some things I would want to add!
+            <ol style="text-align: left;">
+                <li>“Stomping” on enemies</li>
+                <li>New levels (at least up to 5 levels total!)</li>
+                <li>Game mechanics that introduce dynamic vertical movement, such as ladders, flying, etc.</li>
+            </ol>
+        </p>
+        <h2 class="header">Kudos</h2>
+        <p class="paragraph">
+            Huge shoutout to the following:<br>
+            <ul style="text-align: left;">
+                <li>Ryan Bautista - Showed me some resources for asynchronous movement of sprites!</li>
+                <li>Arissa Zheng - She helped me debug and figure out how to deploy my final prototype, which I then used the same learnings for this project.</li>
+                <li>TA Raina - Thanks for helping me figure out my game error!</li>
+                <li><a href="https://p5play.org/learn/index.html">The entire P5 Play Documentation</a> -  I would not understand a single thing if it weren’t for this documentation <3 </li>
+            </ul>
+        </p>
+  </body>
+</html>
