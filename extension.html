@@ -9,7 +9,7 @@
     <div class="page-container">
         <div class="navbar">
             <a href="index.html">
-                <img src="static/logo.png" href="index.html">
+                <img src="static/logo.png" alt="frannie logo" href="index.html">
             </a>
             <div class="navitems">
               <a class="navlink" href="index.html">My Work<br></a>
@@ -37,7 +37,7 @@
             What made this process easier to begin with was that us students in HCDE 439 were given an example website to work on as the foundation of our portfolios. This gave me a good idea of what content was required, and actually made me realize to take a look at my personal Product Design portfolio to refresh myself on how I prefer to structure my websites.<br><br>
             This browser extension, “Eyedropper!” allows you to use a color eyedropper to grab the hex code of any element on your screen using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper_API">Eyedropper API</a>. 
         </p>
-        <img class="picture" src="/static/eyedropper.gif">
+        <img class="picture" alt="gif where user selects a blue color on an image of a sunset and retrieves the hex code with a browser extension" src="/static/eyedropper.gif">
         <p class="paragraph">
             Upon opening the extension and clicking the primary button, the user's cursor changes to an eyedropper. Users can hover over any element on their screen, and when clicked, the hex code of that color appears as well as a preview of that color on the extension's popup menu. To exit the eyedropper, user can select “Esc” or click out of the extension popup menu.<br><br>
             To run this extension, you can clone this <a href="https://github.com/FrannieEllo/eyedropper-extension">eyedropper extension repository</a> and load it as an “unpacked” extension under Google Chrome Extension Management.
@@ -52,18 +52,18 @@
             <b>3. Working on the HTML/CSS</b><br>
             After reading through the documentation, I felt more confident in visualizing what this extension would look like. I started working on the interface of the extension popup, where I knew it was important to show the color as well as it's hex code in the menu. From time to time, the content of the popup menu would change, in which the next image shows my first iteration.<br><br>
         </p>
-        <img class="picture" src="/static/popup wip.PNG">
+        <img class="picture" alt="overlay with text that reads 'Eyedropper! Hover & click an element to get its HEX code'" src="/static/popup wip.PNG">
         <p class="paragraph">
             <b>4. Playing around with Javascript</b><br>
             Once I had finally decided on an interface, I began the most challenging part of the project: implementing the logic with Javascript. Like I had mentioned before, I had never really learned Javascript, so I looked to examples of extensions and other websites that had used the Eyedropper API to get a better sense of how I would craft my extension’s logic. This step consisted of a lot of saving and reloading my extension, but it all came into place! Here’s an image of the final interface after implementing the Javascript correctly.<br><br>
         </p>
-        <img class="picture" src="/static/popup-final.PNG">
+        <img class="picture" alt="overlay with black button with text, 'Click to open the eyedropper' and a blue rectangle at the bottom" src="/static/popup-final.PNG">
         <h2 class="header">Issue Deep Dive</h2>
         <p class="paragraph">
             Unfortunately, I dove into this project a lot later than expected because I got very sick during week 2 and missed some of the foundational content on Javascript. When it eventually came to writing out the Javascript for my extension, I found myself questioning, “what is the difference between a content.js and a popup.js?” While it was a challenge to understand the foundations, I found that learning through javascript.info and reading through W3 Schools resources helped me gain a better grasp of working with Javascript and HTML.<br><br>
             A particular issue that stemmed from this lack of understanding was the issue of the hex code nor the color preview changing. Something that had greatly helped was the message that was shown where the hex code was supposed to appear, as it reminded me to look into the Eyedropper API documentation.<br><br>
         </p>
-        <img class="picture" src="/static/popup-error.PNG">
+        <img class="picture" alt="wide overlay with text, 'Hex Code: NotAllowedError' showing a bug during extension development" src="/static/popup-error.PNG">
         <p class="paragraph">
             From the issue in this image, I found that I needed to add some sort of button, or “gesture” to interact with in order for the interface to appear. By adding a button into my HTML and adding an Event listener for the button click, the extension worked!<br><br>
         </p>

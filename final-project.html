@@ -9,7 +9,7 @@
     <div class="page-container">
         <div class="navbar">
             <a href="index.html">
-                <img src="static/logo.png" href="index.html">
+                <img src="static/logo.png" alt="frannie logo" href="index.html">
             </a>
             <div class="navitems">
               <a class="navlink" href="index.html">My Work<br></a>
@@ -29,7 +29,7 @@
         <p class="paragraph">
             The previously unnamed game I created for my MP3, Carrot Hero, is a higher-fidelity game that includes another level, new game mechanics, and support to allow players to replay the game without refreshing their page. This game is created entirely in Javascript, using the P5 js and P5 play libraries for development. You can access the game <a href="https://frannieello.github.io/carrot-hero/" style="text-decoration:none">here.</a>
         </p>
-        <img class="picture" src="/static/carrot-hero.gif">
+        <img class="picture" alt="gif of 8-bit farmer jumping to avoid moving bugs and collecting a carrot" src="/static/carrot-hero.gif">
         <h2 class="header">Development Process</h2>
         <p class="paragraph">
             Since much of my process was previously planned out, I went into my project by prioritizing the following additions to implement into my game. These additions were prioritized via feedback I received from sharing this project in class with students in HCDE 438, but I also went and conducted a “likes, dislikes, design ideas” session to gather feedback from 5 peers.
@@ -60,7 +60,7 @@
         <h2 class="header">Issue Deep-Dive</h2>
         <p class="paragraph">
             The most concerning issue I dealt with came after I implemented all of the steps above. All of the sprites and tiles from previous levels kept loading in on the next level, causing this mix where all of the game elements were mixed together in one. See the gif below for a glimpse into what this looked like:</p>
-        <img class="picture" src="/static/final-bug.gif">
+        <img class="picture" alt="8-bit farmer standing while two stink bugs dance in place" src="/static/final-bug.gif">
         <p class="paragraph">
             I spent a good chunk of time reading through p5 js documentation, as I believed that this was an error as a result of my levels being partially defined in my window.setup function. I played around with remove(), as I believed that I needed to clear out all of my sprites before each level started. It wasn’t until I talked through my issue in office hours with Raina that I found the proper syntax for removing a sprite in p5 play. I ended up creating a function called clearPrevLevel() which removed every single sprite group in the previous level before adding the new tiles and sprites for the new level.
         </p>
