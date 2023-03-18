@@ -1,6 +1,6 @@
 .header {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.rem;
+  font-size: 2.2rem;
   font-style: normal;
   font-weight: 800px;
   color: #5D30A6;
@@ -10,7 +10,7 @@
 .paragraph {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: black;
   text-align:start;
   margin: auto;
@@ -50,6 +50,7 @@ body {
   background-color: #FBF9FF;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+  font-size: 1.3rem;
   color: black;
   text-align: center;
 }
