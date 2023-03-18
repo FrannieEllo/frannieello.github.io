@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="static" href="C:\Users\frann\Documents\HCDE 438\frannieello.github.io\static">
+    <link rel="icon" type="image/x-icon" href="./static/favicon.png">
   </head>
   <body>
     <div class="page-container">
@@ -23,9 +24,10 @@
               <a class="navlink" href="https://www.frannieello.com">Product Design</a>
             </div>
           </div>
-        <h1 class="header" style="text-align:center">Cheatsheet</h1>
-        <h2 class="header" style="text-align:center;">Typewriter Transition</h2>
-        <code>
+        <h1 class="header">Cheatsheet</h1>
+        <h2 class="header">Typewriter Transition</h2>
+          <p class="paragraph">
+            <code>
             @keyframes typing {<br>
                 from { width: 0 }<br>
                 to { width: 100% }<br>
@@ -40,6 +42,74 @@
                 width: fit-content;<br>
                 margin: auto;<br>
             }<br><br>
-        </code>
+            </code>
+          </p>
+        
+        <h2 class="header">Eyedropper API: Checking if API is supported</h2>
+        <p class="paragraph">
+          <code>
+            if (!window.EyeDropper) {<br>
+              colorContainer.textContent =<br>
+                'Your browser does not support the EyeDropper API";<br>
+              return;<br>
+            }<br>
+          </code>
+        </p>
+
+        <h2 class="header">Audio Input with P5 js</h2>
+        <p class="paragraph">
+          <code>
+            let mic;<br>
+            function setup() {<br>
+              createCanvas(200, 200)<br>
+              mic = new p5.AudioIn();<br>
+              mic.start();<br>
+            }<br><br>
+  
+            function draw() {<br>
+              background(51);<br>
+              let vol = mic.getLevel();<br>
+              ellipse(height/2, width/2, vol*500, vol*500);<br>
+              console.log('volume', vol);<br>
+            }<br>
+          </code>
+        </p>
+
+        <h2 class="header">Animated Scrolling Background (Final Game)</h2>
+        <p class="paragraph">
+          <code>
+            var bgImg;<br>
+            var x1 = 0;<br>
+            var x2;<br><br>
+            
+            var scrollSpeed = 2;<br><br>
+            
+            function preload(){<br>
+              bgImg = loadImage("bg.png");<br>
+            }<br><br>
+            
+            function setup() { <br>
+              createCanvas(400, 400);<br><br>
+              
+              x2 = width;<br>
+            } <br><br>
+            
+            function draw() { <br>
+              image(bgImg, x1, 0, width, height);<br>
+              image(bgImg, x2, 0, width, height);<br><br>
+              
+              x1 -= scrollSpeed;<br>
+              x2 -= scrollSpeed;<br><br>
+              
+              if (x1 < -width){<br>
+                x1 = width;<br><br>
+              }<br>
+              if (x2 < -width){<br>
+                x2 = width;<br>
+              }<br>
+              
+            }<br>
+          </code>
+        </p>
   </body>
 </html>
